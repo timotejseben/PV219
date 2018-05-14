@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+input, .checkbox input + span, button, .btn {
+  transition: all 0.4s; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  background: #fcfcfc;
+  color: #333333; }
+  body * {
+    box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+input {
+  display: inline-block;
+  background: #ffffff;
+  padding: 0 1rem;
+  line-height: 3rem;
+  border: 2px solid #e0e0e0;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  outline-width: 0;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  vertical-align: middle; }
+
+.checkbox {
+  cursor: pointer; }
+  .checkbox input {
+    display: none; }
+    .checkbox input + span {
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      background: #ffffff;
+      color: #ffffff;
+      border: 2px solid #e0e0e0;
+      font-size: 1.2rem;
+      border-radius: 3px;
+      outline-width: 0;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center; }
+    .checkbox input:checked + span {
+      border: 2px solid #fff46e;
+      color: #fff46e; }
+
+button, .btn {
+  background: #fff46e;
+  color: #554e00;
+  padding: 0 1rem;
+  line-height: 3rem;
+  border: 2px solid #eedb00;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  outline-width: 0;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle; }
+
+body header nav, main, footer {
+  display: block;
+  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+body header nav {
+  display: flex;
+  background: #fff46e;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.04), 0 3px 8px 0 rgba(0, 0, 0, 0.08); }
+  body header nav a {
+    display: inline-block;
+    color: #554e00;
+    line-height: 60px;
+    padding: 0 1rem;
+    font-size: 1.2rem; }
+    body header nav a:hover {
+      background: #fff03b; }
+    body header nav a.brand {
+      margin-right: auto; }
+
+body header nav ul {
+  display: inline-block;
+  margin: 0; }
+  body header nav ul li {
+    display: inline-block; }
+
+main {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.login {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.02), 0 3px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 3px; }
+  .login * {
+    margin-top: 0;
+    display: block;
+    width: 100%; }
+
+.todo.done input {
+  border-color: #fff46e; }
+
+.todo .checkbox span {
+  border-radius: 3px 0 0 3px;
+  border-right-width: 0; }
+
+.todo input {
+  border-radius: 0;
+  border-right-width: 0; }
+
+.todo .delete {
+  border-radius: 0 3px 3px 0; }
+
+footer {
+  text-align: center;
+  margin: 2rem 0; }

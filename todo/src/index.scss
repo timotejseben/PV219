@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$base-color: #fff46e;
+
+%transition {
+  transition: all 0.4s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  background: #fcfcfc;
+  color: lighten( #000000, 20% );
+  * {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  @extend %transition;
+  display: inline-block;
+  background: #ffffff;
+  padding: 0 1rem;
+  line-height: 3rem;
+  border: 2px solid #e0e0e0;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  outline-width: 0;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  vertical-align: middle;
+}
+
+.checkbox {
+  cursor: pointer;
+  input {
+    display: none;
+    &+span {
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      background: #ffffff;
+      color: #ffffff;
+      border: 2px solid #e0e0e0;
+      font-size: 1.2rem;
+      border-radius: 3px;
+      outline-width: 0;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+      @extend %transition;
+    }
+    &:checked+span {
+      border: 2px solid $base-color;
+      color: $base-color;
+    }
+  }
+}
+
+button, .btn {
+  @extend %transition;
+  background: $base-color;
+  color: darken( $base-color, 55% );
+  padding: 0 1rem;
+  line-height: 3rem;
+  border: 2px solid darken( $base-color, 25% );
+  font-size: 1.2rem;
+  border-radius: 3px;
+  outline-width: 0;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+%frame {
+  display: block;
+  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// HEADER
+
+body header nav {
+  @extend %frame;
+  display: flex;
+  background: $base-color;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.04), 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+  a {
+    display: inline-block;
+    color: darken( $base-color, 55% );
+    line-height: 60px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    &:hover {
+      background: darken( $base-color, 10% );
+    }
+    &.brand {
+      margin-right: auto;
+    }
+  }
+}
+
+body header nav ul {
+  display: inline-block;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+}
+
+// MAIN
+main {
+  @extend %frame;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.login {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.02), 0 3px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  * {
+    margin-top: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+.todo {
+  &.done {
+    input {
+      border-color: $base-color;
+    }
+  }
+  .checkbox span {
+    border-radius: 3px 0 0 3px;
+    border-right-width: 0;
+  }
+  input {
+    border-radius: 0;
+    border-right-width: 0;
+  }
+  .delete {
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+// FOOTER
+
+footer {
+  @extend %frame;
+  text-align: center;
+  margin: 2rem 0;
+}
